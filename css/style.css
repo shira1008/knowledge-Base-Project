@@ -15,9 +15,9 @@
   --primary-200: #fff2ee;
   --primary-300: #ffe5dc;
   --primary-400: #ffd9cb;
-  --primary-500: #ffb296;
+  --primary-500: #fcaa8c;
   --primary-600: #ffa585;
-  --primary-700: #ff9973;
+  --primary-700: #fc8a61;
   --primary-800: #663320;
   --primary-900: #331910;
 
@@ -134,9 +134,6 @@ ul:not(.catagory-section ul, .card-related ul) {
 .my-form .btn-hipster {
   width: 100%;
   margin-top: 0;
-}
-::placeholder {
-  color: red;
 }
 
 /* הקו!! */
