@@ -1,0 +1,203 @@
+/* global styles */
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&family=Montserrat&display=swap");
+
+:root {
+  /* 'אתרים: happyhues, coolers */
+  /* אתרים: color shade generator - shadoworld */
+  /* colors */
+  --primary-100: #fff2ee;
+  --primary-200: #fff2ee;
+  --primary-300: #ffe5dc;
+  --primary-400: #ffd9cb;
+  --primary-500: #ffb296;
+  --primary-600: #ffa585;
+  --primary-700: #ff9973;
+  --primary-800: #663320;
+  --primary-900: #331910;
+
+  /* ספריות: bootstrap , tailwindcss */
+  /* grey */
+  --grey-50: #f8fafc;
+  --grey-100: #f1f5f9;
+  --grey-200: #e2e8f0;
+  --grey-300: #cbd5e1;
+  --grey-400: #94a3b8;
+  --grey-500: #64748b;
+  --grey-600: #475569;
+  --grey-700: #334155;
+  --grey-800: #1e293b;
+  --grey-900: #0f172a;
+  /* rest of the colors */
+  --black: #222;
+  --white: #fff;
+  /* מהבוסטראפ לאלרט וכו*/
+  --red-light: #f8d7da;
+  --red-dark: #842029;
+  --green-light: #d1e7dd;
+  --green-dark: #0f5132;
+
+  /* fonts  */
+  --headingFont: "Roboto", sans-serif;
+  --bodyFont: "Nunito", sans-serif;
+  --small-text: 0.875rem;
+  --extra-small-text: 0.7em;
+
+  /* rest of the vars */
+  --backgroundColor: var(--grey-50);
+  --textColor: var(--grey-900);
+  --borderRadius: 0.25rem;
+  --letterSpacing: 1px;
+  --transition: 0.3s ease-in-out all;
+  --max-width: 1120px;
+  /* depends on the project(exmp: for forms): */
+  --fixed-width: 600px;
+
+  /* box shadow - tailwindcss*/
+  --shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* fonts size from type scale */
+/* html and link on top that is from the font too */
+body {
+  /* background: var(--backgroundColor); */
+  font-family: var(--bodyFont);
+  font-weight: 400;
+  line-height: 1.75;
+  color: var(--textColor);
+  /* i can add global padding */
+}
+
+/* if i have logo or somthing i need to add :not, or i can add img class and change that to .img */
+/* img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+} */
+
+a {
+  text-decoration: none;
+  color: var(--primary-700);
+}
+
+a:hover,
+.my-navigation a:hover {
+  color: var(--primary-900);
+}
+ul:not(.catagory-section ul, .card-related ul) {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* buttons */
+
+.my-btn {
+  cursor: pointer;
+  color: var(--white);
+  background: var(--primary-500);
+  border: transparent;
+  border-radius: var(--borderRadius);
+  letter-spacing: var(--letterSpacing);
+  padding: 0.375rem 0.75rem;
+  box-shadow: var(--shadow-1);
+  transition: var(--transition);
+  text-transform: capitalize;
+  display: inline-block;
+  /* might change to display: block - depend on situation- i think when i want to control btn from container */
+}
+.my-btn:hover {
+  background: var(--primary-700);
+  box-shadow: var(--shadow-3);
+}
+.btn-hipster {
+  color: var(--primary-700);
+  background: var(--primary-100);
+  border: 1px solid var(--primary-700);
+  font-size: 0.835rem;
+}
+.btn-hipster:hover {
+  color: var(--primary-200);
+  background: var(--primary-700);
+}
+
+.my-form .btn-hipster {
+  width: 100%;
+  margin-top: 0;
+}
+::placeholder {
+  color: red;
+}
+
+/* הקו!! */
+.title-underline {
+  background: var(--primary-500);
+  width: 7rem;
+  height: 0.25rem;
+  margin: 0 auto;
+  margin-top: -1rem;
+}
+
+/* ===================my style - index: ========================*/
+/* ==========navbar========== */
+.navbar {
+  background: var(--primary-100);
+}
+
+/*============ search============ */
+
+/* =============articles============== */
+.my-card {
+  box-shadow: var(--shadow-2);
+  transition: var(--transition);
+}
+
+.my-card:hover {
+  box-shadow: var(--shadow-4);
+  transform: scale(102%);
+}
+
+.hello {
+  background-color: var(--primary-500);
+}
+
+/* ===========catagories=========== */
+.my-catagory:hover p {
+  color: var(--primary-800);
+}
+
+/* footer */
+.my-footer-clr {
+  background: var(--primary-100);
+}
+
+.my-icon {
+  color: var(--primary-700);
+}
+/* &&&&&&&&&& catagory.html &&&&&&&&& */
+/* navigation */
+.my-navigation a {
+  color: var(--primary-700);
+}
+/* ==========catagory============= */
+/* added in the global ul */
+.catagory-section h2,
+h3 {
+  color: var(--primary-800);
+}
+/* ======technical supp======*/
+/* used hipster btn */
+
+/* &&&&&&&&&& article.html &&&&&&&&& */
+/* changed btn's width in global */
+/* .card-related changed ul display gplbal */
